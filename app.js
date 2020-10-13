@@ -5,6 +5,7 @@ const form = document.getElementById("nameform");
 function gif(q) {
 
     //returns a promise
+    //ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
     return new Promise(function(resolve, reject) {
         
         let urlVars = {
@@ -22,7 +23,6 @@ function gif(q) {
                 return response.json();
             })
             .then(function(result) {
-                console.log(result);
                 resolve(result.data.image_original_url);
             });
     });
