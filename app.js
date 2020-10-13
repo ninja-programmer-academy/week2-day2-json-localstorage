@@ -33,8 +33,8 @@ function gif(q) {
 form.addEventListener("submit", async () => {
     event.preventDefault();
 
-    let input = form.getElementsByTagName("input")[0];
-    let helloDiv = document.getElementById("hello");
+    const input = form.getElementsByTagName("input")[0];
+    const helloDiv = document.getElementById("hello");
     //use await to keep code synchronous
     //ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await
     const gifUrl = await gif(input.value);
